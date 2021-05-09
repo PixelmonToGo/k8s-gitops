@@ -1,0 +1,44 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: alpha-artemis-de
+  namespace: kube-system
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: alpha.artemis.de.pixelmontogo.com
+spec:
+  type: ExternalName
+  externalName: 138.201.203.147
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bravo-artemis-de
+  namespace: kube-system
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: bravo.artemis.de.pixelmontogo.com
+spec:
+  type: ExternalName
+  externalName: 138.201.203.179
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: charlie-artemis-de
+  namespace: kube-system
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: charlie.artemis.de.pixelmontogo.com
+spec:
+  type: ExternalName
+  externalName: 138.201.203.183
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: delta-artemis-de
+  namespace: kube-system
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: delta.artemis.de.pixelmontogo.com
+spec:
+  type: ExternalName
+  externalName: 138.201.203.178

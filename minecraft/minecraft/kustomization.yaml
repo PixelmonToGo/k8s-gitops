@@ -1,0 +1,9 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - minecraft-database.yaml
+  - minecraft-forge-charmander.yaml
+  - minecraft-lobby-kanto.yaml
+  - minecraft-proxy.yaml
+  - service-monitors.yaml
