@@ -1,0 +1,42 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: oauth2-proxy
+  namespace: kube-system
+spec:
+  interval: 5m
+  chart:
+    spec:
+      # renovate: registryUrl=https://charts.helm.sh/stable
+      chart: oauth2-proxy
+      version: 3.2.5
+      sourceRef:
+        kind: HelmRepository
+        name: kubernetes-stable-charts
+        namespace: flux-system
+      interval: 5m
+  values:
+    image:
+      repository: "quay.io/oauth2-proxy/oauth2-proxy"
+      tag: "v7.1.3"
+    replicaCount: 1
+    ingress:
+      enabled: true
+      path: /oauth2
+      hosts: [auth.pixelmontogo.com]
+      tls:
+        - hosts:
+            - auth.pixelmontogo.com
+    extraArgs:
+      provider: oidc
+      oidc-issuer-url: https://pixelmontogo.eu.auth0.com/
+      skip-provider-button:
+      pass-authorization-header:
+      email-domain: "*"
+      cookie-domain: .pixelmontogo.com
+      whitelist-domain: .pixelmontogo.com
+  valuesFrom:
+    - kind: Secret
+      name: "oauth2-proxy-helm-values"
+      optional: false
