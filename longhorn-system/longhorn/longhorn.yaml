@@ -19,13 +19,13 @@ spec:
       interval: 5m
   values:
     persistence:
-      defaultClassReplicaCount: 2
+      defaultClassReplicaCount: 1
     defaultSettings:
       defaultDataPath: /longhorn
-      defaultReplicaCount: 2
+      defaultReplicaCount: 1
       createDefaultDiskLabeledNodes: true
       storageMinimalAvailablePercentage: "10"
-      backupTarget: nfs://10.10.10.31:/mnt/tardisk/k3s
+      #backupTarget: nfs://10.10.10.31:/mnt/tardisk/k3s
     ingress:
       enabled: true
       host: longhorn.pixelmontogo.com

@@ -37,6 +37,8 @@ installFlux() {
     --owner=pixelmontogo \
     --repository=k8s-gitops \
     --branch main \
+    --private=false \
+    --validation=none \
     --personal
 
   FLUX_INSTALLED=$?
