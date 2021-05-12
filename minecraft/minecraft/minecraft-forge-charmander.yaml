@@ -18,7 +18,7 @@ spec:
   values:
     # ref: https://github.com/itzg/minecraft-server-charts/blob/master/charts/minecraft/values.yaml
     image: itzg/minecraft-server
-    imageTag: 1.8.0-adopt13
+    imageTag: 2021.11.0-java8
     persistence:
       storageClass: longhorn
       dataDir:
