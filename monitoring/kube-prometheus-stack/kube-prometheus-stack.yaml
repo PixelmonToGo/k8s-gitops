@@ -87,6 +87,9 @@ spec:
           nginx.ingress.kubernetes.io/auth-url: "https://auth.pixelmontogo.com/oauth2/auth"
           nginx.ingress.kubernetes.io/auth-signin: https://auth.pixelmontogo.com/oauth2/start
         hosts: [prom-alert.pixelmontogo.com]
+        paths:
+          - /
+        pathType: ImplementationSpecific
         tls:
           - hosts:
               - prom-alert.pixelmontogo.com
@@ -142,6 +145,9 @@ spec:
           nginx.ingress.kubernetes.io/auth-url: "https://auth.pixelmontogo.com/oauth2/auth"
           nginx.ingress.kubernetes.io/auth-signin: https://auth.pixelmontogo.com/oauth2/start
         hosts: [prom-server.pixelmontogo.com]
+        paths:
+          - /
+        pathType: ImplementationSpecific
         tls:
           - hosts:
               - prom-server.pixelmontogo.com
