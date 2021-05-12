@@ -36,6 +36,7 @@ spec:
       eula: "TRUE"
       onlineMode: false
       version: "1.12.2"
+      forgeVersion: "14.23.5.2854"
       gameMode: "0"
       forcegameMode: false
       type: FORGE
