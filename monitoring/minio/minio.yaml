@@ -27,8 +27,7 @@ spec:
       repository: drnic/kubectl
       tag: 1.16
     persistence:
-      existingClaim: cifs-data-pvc
-      subPath: minio
+      storageClass: longhorn
     ingress:
       enabled: true
       annotations:
