@@ -2,15 +2,15 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: minecraft-survival
-  namespace: default
+  name: minecraft-forge-charmander
+  namespace: minecraft
 spec:
   selector:
     matchLabels:
-      app: minecraft-survival-minecraft-prometheus
+      app: minecraft-forge-charmander-minecraft-prometheus
   namespaceSelector:
     matchNames:
-      - default
+      - minecraft
   endpoints:
     - port: prometheus
       interval: 15s
@@ -20,15 +20,15 @@ spec:
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: minecraft-creative
-  namespace: default
+  name: minecraft-lobby-kanto
+  namespace: minecraft
 spec:
   selector:
     matchLabels:
-      app: minecraft-creative-minecraft-prometheus
+      app: minecraft-lobby-kanto-minecraft-prometheus
   namespaceSelector:
     matchNames:
-      - default
+      - minecraft
   endpoints:
     - port: prometheus
       interval: 15s
