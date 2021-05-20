@@ -65,3 +65,14 @@ spec:
             port: 9225
           ingress:
             enabled: false
+        - name: voice
+          containerPort: 24454
+          service:
+            enabled: true
+            annotations:
+              metallb.universe.tf/allow-shared-ip: proxy
+            type: LoadBalancer
+            loadBalancerIP: 54.36.241.26
+            port: 24454
+          ingress:
+            enabled: false
