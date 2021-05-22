@@ -24,10 +24,10 @@ spec:
     ingress:
       enabled: true
       path: /oauth2
-      hosts: [auth.pixelmontogo.com]
+      hosts: [login.pixelmontogo.com]
       tls:
         - hosts:
-            - auth.pixelmontogo.com
+            - login.pixelmontogo.com
     extraArgs:
       provider: oidc
       oidc-issuer-url: https://pixelmontogo.eu.auth0.com/

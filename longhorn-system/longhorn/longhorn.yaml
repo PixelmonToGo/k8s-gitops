@@ -34,5 +34,5 @@ spec:
       annotations:
         kubernetes.io/ingress.class: nginx
         cert-manager.io/cluster-issuer: letsencrypt-prod
-        nginx.ingress.kubernetes.io/auth-url: https://auth.pixelmontogo.com/oauth2/auth
-        nginx.ingress.kubernetes.io/auth-signin: https://auth.pixelmontogo.com/oauth2/start
+        nginx.ingress.kubernetes.io/auth-url: https://login.pixelmontogo.com/oauth2/auth
+        nginx.ingress.kubernetes.io/auth-signin: https://login.pixelmontogo.com/oauth2/start
