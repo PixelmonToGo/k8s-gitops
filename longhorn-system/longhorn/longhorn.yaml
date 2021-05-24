@@ -25,7 +25,8 @@ spec:
       defaultReplicaCount: 2
       createDefaultDiskLabeledNodes: true
       storageMinimalAvailablePercentage: "10"
-      #backupTarget: nfs://10.10.10.31:/mnt/tardisk/k3s
+      backupTarget: s3://longhorn@us-east-1/
+      backupTargetSecret: minio-secret
     ingress:
       enabled: true
       host: longhorn.pixelmontogo.com

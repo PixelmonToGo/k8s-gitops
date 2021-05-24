@@ -170,8 +170,9 @@ loadSecretsToVault() {
   message "writing secrets to vault"
   #vault kv put secrets/flux-system/discord-webhook address="$DISCORD_FLUX_WEBHOOK_URL"
   vault kv put secrets/cert-manager/cloudflare-api-key api-key="$CLOUDFLARE_API_KEY"
-  vault kv put secrets/kube-system/external-dns/cloudflare-api-key cloudflare_api_token="$CLOUDFLARE_API_KEY"
   vault kv put secrets/flux-system/discord-webhook address="$DISCORD_FLUX_WEBHOOK_URL"
+  vault kv put secrets/kube-system/external-dns/cloudflare-api-key cloudflare_api_token="$CLOUDFLARE_API_KEY"
+  vault kv put secrets/longhorn-system/longhorn/minio-secret AWS_ACCESS_KEY_ID="$MINIO_ACCESS_KEY" AWS_SECRET_ACCESS_KEY="$MINIO_SECRET_KEY" AWS_ENDPOINTS="$MINIO_URL"
 
   ####################
   # helm chart values
