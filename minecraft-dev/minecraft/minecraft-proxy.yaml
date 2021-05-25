@@ -1,0 +1,35 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: minecraft-proxy
+  namespace: minecraft-dev
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: minecraft-proxy
+      sourceRef:
+        kind: HelmRepository
+        name: minecraft-server-charts
+        namespace: flux-system
+      interval: 5m
+  values:
+    nameOverride: dev
+    image: itzg/bungeecord
+    imageTag: java8
+    persistence:
+      storageClass: longhorn
+      dataDir:
+        enabled: true
+    minecraftProxy:
+      type: VELOCITY
+      serviceType: LoadBalancer
+      loadBalancerIP: 54.36.241.29
+      externalTrafficPolicy: Cluster
+      memory: 512M
+      rcon:
+        enabled: true
+        serviceType: ClusterIP
+    serviceAnnotations:
+      metallb.universe.tf/allow-shared-ip: dev-proxy
