@@ -16,7 +16,7 @@ spec:
       interval: 5m
   values:
     image: itzg/bungeecord
-    imageTag: 1.5.0-adopt13
+    imageTag: java8
     persistence:
       storageClass: longhorn
       dataDir:
