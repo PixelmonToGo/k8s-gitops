@@ -68,12 +68,13 @@ spec:
             enabled: false
         - name: voice
           containerPort: 24454
+          protocol: UDP
           service:
             enabled: true
             annotations:
-              metallb.universe.tf/allow-shared-ip: proxy
+              metallb.universe.tf/allow-shared-ip: bravo-proxy
             type: LoadBalancer
-            loadBalancerIP: 54.36.241.26
+            loadBalancerIP: 54.36.241.28
             port: 24454
           ingress:
             enabled: false

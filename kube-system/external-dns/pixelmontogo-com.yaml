@@ -63,8 +63,7 @@ metadata:
     external-dns.alpha.kubernetes.io/hostname: play.pixelmontogo.com
 spec:
   type: ExternalName
-  externalName: bravo.vr1.pixelmontogo.com
-
+  externalName: delta.vr1.pixelmontogo.com
 ---
 apiVersion: v1
 kind: Service
