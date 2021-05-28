@@ -47,7 +47,7 @@ spec:
       levelType: DEFAULT
       playerIdleTimeout: 300
       maxWorldSize: 29999984
-      maxPlayers: 120
+      maxPlayers: 200
       viewDistance: 4
       maxTickTime: -1
       memory: 16G
