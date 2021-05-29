@@ -18,7 +18,7 @@ spec:
   values:
     nameOverride: prod
     image: itzg/bungeecord
-    imageTag: 2021.3.0-java11
+    imageTag: java8
     persistence:
       storageClass: longhorn
       dataDir:
@@ -27,7 +27,7 @@ spec:
       type: VELOCITY
       serviceType: LoadBalancer
       loadBalancerIP: 54.36.241.28
-      externalTrafficPolicy: Cluster
+      externalTrafficPolicy: Local
       memory: 2G
       extraPorts:
         - name: vote

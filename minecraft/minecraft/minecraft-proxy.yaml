@@ -25,7 +25,7 @@ spec:
       type: WATERFALL
       serviceType: LoadBalancer
       loadBalancerIP: 54.36.241.26
-      externalTrafficPolicy: Cluster
+      externalTrafficPolicy: Local
       memory: 2G
       rcon:
         enabled: true
