@@ -32,6 +32,7 @@ spec:
     extraEnv:
       USE_AIKAR_FLAGS: "TRUE"
       OVERRIDE_SERVER_PROPERTIES: "TRUE"
+      NETWORK_COMPRESSION_THRESHOLD: "-1"
     minecraftServer:
       eula: "TRUE"
       onlineMode: false
