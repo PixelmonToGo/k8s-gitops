@@ -25,6 +25,7 @@ spec:
         enabled: true
     minecraftProxy:
       type: VELOCITY
+      velocityVersion: 1.1.5
       serviceType: LoadBalancer
       loadBalancerIP: 54.36.241.28
       externalTrafficPolicy: Local
