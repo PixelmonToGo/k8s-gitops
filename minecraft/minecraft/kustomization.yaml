@@ -5,6 +5,5 @@ resources:
   - minecraft-database.yaml
   - minecraft-forge-charmander.yaml
   - minecraft-lobby-kanto.yaml
-  - minecraft-proxy.yaml
   - minecraft-proxy-bravo.yaml
   - service-monitors.yaml
