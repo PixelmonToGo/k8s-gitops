@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
   - minecraft-database.yaml
   - minecraft-forge-charmander.yaml
+  - minecraft-forge-squirtle.yaml
   - minecraft-lobby-kanto.yaml
   - minecraft-proxy-bravo.yaml
   - service-monitors.yaml
