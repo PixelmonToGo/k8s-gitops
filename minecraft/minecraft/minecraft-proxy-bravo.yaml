@@ -8,11 +8,10 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: minecraft-proxy
-      version: 2.1.0
+      chart: ./releases/minecraft-proxy-2.2.0.tgz
       sourceRef:
-        kind: HelmRepository
-        name: minecraft-server-charts
+        kind: GitRepository
+        name: ptg-minecraft-server-charts
         namespace: flux-system
       interval: 5m
   values:
@@ -37,19 +36,14 @@ spec:
       velocityVersion: 1.1.5
       serviceType: LoadBalancer
       loadBalancerIP: 54.36.241.28
-      externalTrafficPolicy: Cluster
+      externalTrafficPolicy: Local
       memory: 2G
       extraPorts:
         - name: vote
           containerPort: 8192
           service:
             enabled: true
-            annotations:
-              metallb.universe.tf/allow-shared-ip: bravo-proxy
-            type: LoadBalancer
-            loadBalancerIP: 54.36.241.28
+            embedded: true
             port: 8192
           ingress:
             enabled: false
-    serviceAnnotations:
-      metallb.universe.tf/allow-shared-ip: bravo-proxy
