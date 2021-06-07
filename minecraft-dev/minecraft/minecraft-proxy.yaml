@@ -8,10 +8,10 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: minecraft-proxy
+      chart: ./releases/minecraft-proxy-2.2.0.tgz
       sourceRef:
-        kind: HelmRepository
-        name: minecraft-server-charts
+        kind: GitRepository
+        name: ptg-minecraft-server-charts
         namespace: flux-system
       interval: 5m
   values:
@@ -31,5 +31,14 @@ spec:
       rcon:
         enabled: true
         serviceType: ClusterIP
+      extraPorts:
+        - name: vote
+          containerPort: 8192
+          service:
+            enabled: true
+            embedded: true
+            port: 8192
+          ingress:
+            enabled: false
     serviceAnnotations:
       metallb.universe.tf/allow-shared-ip: dev-proxy
