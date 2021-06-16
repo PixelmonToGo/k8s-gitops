@@ -37,11 +37,11 @@ spec:
       eula: "TRUE"
       onlineMode: false
       version: "1.12.2"
-      jvmOpts: "-Dfml.readTimeout=300"
+      jvmOpts: "-Dfml.readTimeout=300 -Dfml.queryResult=confirm"
       forgeVersion: "14.23.5.2854"
       gameMode: "1"
       forcegameMode: false
-      type: FORGE
+      type: CATSERVER
       pvp: false
       forceReDownload: true
       difficulty: "0"
