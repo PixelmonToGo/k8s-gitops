@@ -141,6 +141,8 @@ spec:
         mode: console
       grafana_net:
         url: https://grafana.net
+      auth.anonymous:
+        enabled: true
       auth.basic:
         disable_login_form: false
   valuesFrom:
