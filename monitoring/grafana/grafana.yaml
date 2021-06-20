@@ -70,6 +70,9 @@ spec:
         1-node-exporter:
           url: https://grafana.com/api/dashboards/11074/revisions/9/download
           datasource: Prometheus
+        cpu-frequency:
+          url: https://raw.githubusercontent.com/pixelmontogo/k8s-gitops/master/monitoring/grafana/dashboards/cpu_frequency.json
+          datasource: Prometheus
         cpu-utilization:
           url: https://grafana.com/api/dashboards/10842/revisions/1/download
           datasource: Prometheus
