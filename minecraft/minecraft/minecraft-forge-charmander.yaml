@@ -46,18 +46,18 @@ spec:
         Size: 100Gi
     resources:
       requests:
-        memory: 16Gi
+        memory: 21Gi
       limits:
-        memory: 20Gi
+        memory: 25Gi
     extraEnv:
-      USE_AIKAR_FLAGS: "TRUE"
+      USE_AIKAR_FLAGS: "FALSE"
       OVERRIDE_SERVER_PROPERTIES: "TRUE"
       NETWORK_COMPRESSION_THRESHOLD: "-1"
     minecraftServer:
       eula: "TRUE"
       onlineMode: false
       version: "1.12.2"
-      jvmOpts: "-Dfml.readTimeout=300"
+      jvmOpts: "-Xmns3G -Xmnx7G -Xgcpolicy:balanced -Xdisableexplicitgc -Dfml.readTimeout=300"
       forgeVersion: "14.23.5.2854"
       gameMode: "0"
       forcegameMode: false
@@ -71,7 +71,7 @@ spec:
       maxPlayers: 120
       viewDistance: 4
       maxTickTime: -1
-      memory: 16G
+      memory: 14G
       motd: "forge-charmander"
       serviceType: ClusterIP
       rcon:
